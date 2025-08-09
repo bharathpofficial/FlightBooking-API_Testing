@@ -1,3 +1,6 @@
+**THIS FILE CAN BE STAGED INTO GIT, CREATE A NEW FILE IN THE SAME DIRECTORY NAMED "config.properties" AND FILL THAT FILE WITH THE BELOW KEY AND VALUES**
+----------------
 client_id=
 client_secret=
 auth_url=
+----------------
