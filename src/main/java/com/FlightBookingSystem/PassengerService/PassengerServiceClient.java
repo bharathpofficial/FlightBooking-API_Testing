@@ -24,6 +24,7 @@ public class PassengerServiceClient {
 
     /**
      * Add Passenger - POST /addPassenger
+     * @author Divya
      */
     public Response addPassenger(Passenger passenger) {
         return given()
@@ -44,6 +45,7 @@ public class PassengerServiceClient {
 
     /**
      * View Passenger by Id - GET /viewPassengerById/{passengerId}
+     * @author adamya
      */
     public Response getPassengerById(int passengerId) {
         return given()
@@ -57,6 +59,7 @@ public class PassengerServiceClient {
 
     /**
      * View Passenger List - GET /viewPassengerList
+     * @author windass
      */
     public Response getPassengerList() {
         return given()
@@ -70,6 +73,7 @@ public class PassengerServiceClient {
 
     /**
      * View Passenger by Name and Mobile - GET /viewPassengerByNameMobile/{passengerName}/{passengerMobile}
+     * @author Divya
      */
     public Response getPassengerByNameMobile(String passengerName, String passengerMobile) {
         return given()
@@ -83,6 +87,7 @@ public class PassengerServiceClient {
 
     /**
      * Delete Passenger by Id - DELETE /deletePassengerById/{passengerId}
+     * @author adamya
      */
     public Response deletePassengerById(int passengerId) {
         return given()
