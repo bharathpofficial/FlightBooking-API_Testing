@@ -94,8 +94,6 @@ Detailed [Testing Docs](TESTING-DOCS.md)
 
 This comprehensive and modular architecture aligns with industry standards for REST API automation, facilitating maintainability, scalability, security, and collaborative development.
 
-For detailed code examples or help with specific modules, feel free to reach out.
-
 ***
 
 *End of README.md content.*
