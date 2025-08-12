@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "passengerId": { "type": "integer" },
+    "passengerName": { "type": "string" },
+    "passengerMobile": { "type": "string" },
+    "passengerGender": { "type": "string" },
+    "passengerAadhaarNumber": { "type": "string" },
+    "passengerAddress": { "type": "string" }
+  },
+  "required": [
+    "passengerId",
+    "passengerName",
+    "passengerMobile",
+    "passengerGender",
+    "passengerAadhaarNumber",
+    "passengerAddress"
+  ]
+}
