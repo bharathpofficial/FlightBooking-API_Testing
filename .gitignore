@@ -4,3 +4,5 @@ config.properties
 .project
 .classpath
 .settings/
+test-report/
+test-output/

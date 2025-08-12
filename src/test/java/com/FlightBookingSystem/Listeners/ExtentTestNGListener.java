@@ -13,7 +13,7 @@ public class ExtentTestNGListener implements ITestListener {
     private static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
 
     private static ExtentReports createInstance() {
-        ExtentSparkReporter reporter = new ExtentSparkReporter("test-output/extent-report.html");
+        ExtentSparkReporter reporter = new ExtentSparkReporter("target/test-output/extent-report.html");
         ExtentReports extentReports = new ExtentReports();
         extentReports.attachReporter(reporter);
         return extentReports;

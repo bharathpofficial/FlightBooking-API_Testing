@@ -66,5 +66,43 @@ public class PassengerServiceClientTest {
         // Assert passengerId 1 is NOT present
         Assert.assertFalse(passengerIds.contains(passengerIdToDelete), "Passenger with ID 1 should not be present");
     }
+    
+    /**
+     * Test the POST /addPassenger endpoint by sending a new Passenger object,
+     * then validate that the API returns a successful response status (200 OK).
+     * Note: This test currently validates the POST response status only.
+     */
+    @Test
+    public void testAddPassenger_ThenValidateByGet() {
+        // Create a sample passenger object
+        Passenger newPassenger = new Passenger(
+            1001, "John Doe", "9876543210", "Male", "987650001234", "New York"
+        );
+
+        // Step 1: Add the passenger via POST
+        Response postResponse = passengerServiceClient.addPassenger(newPassenger);
+
+        // Step 2: Validate response status code for POST
+        postResponse.then().statusCode(200);
+    }
+    
+    /**
+     * Validate the GET /viewPassengerByNameMobile/{passengerName}/{passengerMobile} endpoint
+     * returns a successful response and the passenger details match the expected JSON schema.
+     */
+    @Test
+    public void testGetPassengerByNameMobile_ValidatesJsonSchema() {
+        String passengerName = "Rakesh";        // Use a valid existing passenger name in your test data
+        String passengerMobile = "1234567890";     // Use matching passenger mobile number
+
+        Response response = passengerServiceClient.getPassengerByNameMobile(passengerName, passengerMobile);
+
+        response.then()
+                .statusCode(200)
+                .assertThat()
+                .body(matchesJsonSchemaInClasspath("passengerSchema.json")); // Validates single passenger object schema
+    }
+
+
 }
 
