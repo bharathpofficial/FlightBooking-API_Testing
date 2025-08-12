@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Flight Ticket Booking API Sevice Testing" verbose="1" >
+    <listeners>
+        <listener class-name="com.FlightBookingSystem.Listeners.ExtentTestNGListener"/>
+    </listeners>
+    <test name="Passenger and Auth Service Tests">
+        <classes>
+            <class name="com.FlightBookingSystem.PassengerService.PassengerServiceClientTest"/>
+            <class name="com.FlightBookingSystem.Authentication.TokenManagerTest"/>
+        </classes>
+    </test>
+</suite>
